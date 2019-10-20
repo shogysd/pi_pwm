@@ -11,7 +11,7 @@ def main():
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(gpio_pin, GPIO.OUT)
 
-    for i in [20, 99, 20, 99]:
+    for i in [10, 100, 10, 100]:
         
         if 0 == i:
             on_time = 0
