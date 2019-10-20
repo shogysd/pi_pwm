@@ -20,7 +20,7 @@ def main():
             on_time = (1 / frequency) * (i / 100)
             off_time = (1 / frequency) * (1 - (i / 100))
 
-        for ct in range(repeat_count):
+        for rc in range(repeat_count):
             GPIO.output(gpio_pin, True)
             time.sleep(on_time)
             GPIO.output(gpio_pin, False)
