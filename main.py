@@ -5,7 +5,7 @@ import time
 def main():
 
     frequency = 200
-    cycle_time = 500
+    cycle_time = 600
     gpio_pin = 18
 
     GPIO.setmode(GPIO.BCM)
@@ -13,7 +13,7 @@ def main():
 
     for i in [20, 99, 20, 99]: #range(20, 100):
         on_time = (1 / frequency) * (i / 100)
-        off_time = (1 / frequency) * ((99 - i) / 100)
+        off_time = (1 / frequency) * (1 - (i / 100))
 
         for ct in range(cycle_time):
             GPIO.output(gpio_pin, True)
