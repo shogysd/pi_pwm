@@ -20,6 +20,8 @@ def main():
             time.sleep(on_time)
             GPIO.output(gpio_pin, False)
             time.sleep(off_time)
+            
+    GPIO.cleanup()
 
 
 if __name__ == '__main__':
